@@ -1,0 +1,74 @@
+\section{Functions}
+\noindent The \vocab{composition} of functions $g$ and $f$ is written as \[f \circ g,\] so \[(f \circ g)(x) = f(g(x)).\]
+
+\bigskip \noindent An \vocab{inverse function} is a function, denoted as $f^{-1}$ (do not confuse it with $\frac{1}{f}$), that reverses function $f(x).$
+
+\bigskip \noindent Classes of functions:
+\begin{itemize}
+    \item For constants $a_0, a_1, \dots a_n, a_n \neq 0$, and non-negative integer $n$, \[P(x) = a_nx^n + a_{n - 1}x^{n - 1} + \dots + a_1x + a_0\] is a \vocab{polynomial}.
+    \item \vocab{Rational functions} are functions in the form $\frac{P(x)}{Q(x)},$ where $P$ and $Q$ are polynomials.
+\end{itemize}
+
+\begin{proposition}[Pythagorean Trigonometric Identity]
+$\sin^2 \theta + \cos^2 \theta = 1.$
+\end{proposition}
+Important trigonometric functions:
+\begin{itemize}
+    \item $\tan \theta = \frac{\sin \theta}{\cos \theta}$
+    \item $\cot \theta = \frac{\cos \theta}{\sin \theta}$
+    \item $\sec \theta = \frac{1}{\cos \theta}$
+    \item $\csc\theta = \frac{1}{\sin \theta}$
+\end{itemize}
+\begin{center}
+\texit{``Now all of these that involve ratios wind up having vertical asymptotes in their graphs. That is, places where the function is undefined and the denominator goes to zero."}
+\end{center}
+Inverse of Trigonometric Functions:
+\begin{itemize}
+    \item $\sin^{-1} = \arcsin$
+    \item $\cos^{-1} = \arccos$
+    \item $\tan^{-1} = \arctan$
+\end{itemize}
+The domain of the $\arcsin$ and $\arccos$ functions are restricted to the closed interval from $-1$ to $1$, because sine and cosine can only take values in that interval. However, $\arctan$ has an infinite domain, yet it's range is limited to the closed interval from $-\frac{\pi}{2}$ to $\frac{\pi}{2}.$
+
+\bigskip \noindent \vocab{Exponential functions} are functions of the form $e^{x}.$
+
+\begin{definition}[$e$]
+The number $e$, known as Euler's number, is a mathematical constant approximately equal to $2.71828.$
+\end{definition}
+Algebraic Properties of the Exponential Function:
+\begin{itemize}
+    \item $e^xe^y = e^{x + y}$
+    \item $(e^x)^y = e^{xy}$
+\end{itemize}
+Differential/Integral Properties of the Exponential Function:
+\begin{itemize}
+    \item $\frac{d}{dx} e^x = e^x$
+    \item $\int e^xdx = e^x + c.$
+\end{itemize}
+\begin{theorem}[Euler's Formula]
+$e^{ix} = \cos x + i \sin x.$
+\end{theorem}
+
+\section{Exponentials}
+\begin{defn}[$e^x$]
+\[e^x = \sum_{i = 0}^{\infty} \frac{1}{ki}x^{i},\] where $i! = i(i - 1)(i - 2)(i - 3)\cdots3\cdot2\cdot1.$
+\end{defn}
+\begin{center}
+    ``In general, the principle that you should follow in trying to understand statements such as the definition of e to the x is to pretend that this is a long polynomial; a polynomial of unbounded degree."
+\end{center}
+Recall when it comes to
+\begin{itemize}
+    \item Differentiation: $\frac{d}{dx} x^{k} = kx^{k - 1}.$
+    \item Integration: $\int x^{k}dx = \frac{1}{k + 1}x^{k + 1} + c,$ for $c$ is an arbitrary constant.  
+\end{itemize}
+Therefore, \[\frac{d}{x} e^x = \frac{d}{dx} \sum_{i = 0}^{\infty} \frac{1}{i!}x^{i} = \sum_{i = 0}^{\infty} \frac{1}{i!} ix^{i - 1} = e^{x},\] and \[\int e^{x}dx = \int\left(\sum_{i = 0}^{\infty} \frac{1}{i!}x^{i}\right)dx = \sum_{i = 0}^{\infty} \frac{1}{i!}\frac{1}{i + 1}x^{i + 1} + c = e^{x} + c.\]
+
+\bigskip \noindent Consider Euler's Formula, $e^{ix} = \cos(x) + i\sin(x).$ We know \[e^{ix} = \sum_{k = 0}^{\infty} \frac{1}{k!}i^{k}x^{k}.\] Since the powers of $i$ repeat in a definite pattern $(i, -1, -i, 1),$ thus \[e^{ix} = \left(\sum_{k = 0}^{\infty} (-1)^{k}\frac{x^{2k}}{(2k)!}\right) + i\left(\sum_{k = 0}^{\infty} (-1)^{k}\frac{x^{2k + 1}}{(2k + 1)!}\right).\] Equating the coefficients, \[\cos(x) = \sum_{k = 0}^{\infty} (-1)^{k}\frac{x^{2k}}{(2k)!} \text{ and } \sin(x) = \sum_{k = 0}^{\infty} (-1)^{k}\frac{x^{2k + 1}}{(2k + 1)!}.\] 
+
+\bigskip \noindent Therefore, \[\frac{d}{dx} \sin(x) = \frac{d}{dx} \sum_{k = 0}^{\infty} (-1)^{k}\frac{x^{2k + 1}}{(2k + 1)!} = \sum_{k = 0}^{\infty} (-1)^{k}\frac{x^{2k}}{(2k)!} = \cos(x).\] 
+
+\begin{remark}
+1) Finite polynomial approximations work best near zero.
+
+\bigskip \noindent 2) Sometimes you will see the term MacLaurin series used to apply to infinite series of this form: \[\sum_{k = 0}^{\infty} \frac{x^{k}}{k!}.\]
+\end{remark}
